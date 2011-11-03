@@ -1,3 +1,9 @@
+# revision 21046
+# category Package
+# catalog-ctan /fonts/cherokee
+# catalog-date 2008-12-25 20:17:19 +0100
+# catalog-license noinfo
+# catalog-version undef
 Name:		texlive-cherokee
 Version:	20081225
 Release:	1
@@ -44,6 +50,7 @@ represented \Cse\Cgwo\Cya.
 %{_texmfdistdir}/fonts/tfm/public/cherokee/cherokee.tfm
 %{_texmfdistdir}/tex/latex/cherokee/cherokee.sty
 %doc %{_texmfdistdir}/doc/fonts/cherokee/README
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -54,3 +61,5 @@ represented \Cse\Cgwo\Cya.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
