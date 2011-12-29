@@ -17,7 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
 
 %description
 The Cherokee script was designed in 1821 by Segwoya. The
@@ -29,20 +28,12 @@ package provides commands that map each such syllable to the
 appropriate character; for example, Segwoya himself would be
 represented \Cse\Cgwo\Cya.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -51,7 +42,6 @@ represented \Cse\Cgwo\Cya.
 %{_texmfdistdir}/fonts/tfm/public/cherokee/cherokee.tfm
 %{_texmfdistdir}/tex/latex/cherokee/cherokee.sty
 %doc %{_texmfdistdir}/doc/fonts/cherokee/README
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -62,5 +52,3 @@ represented \Cse\Cgwo\Cya.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
