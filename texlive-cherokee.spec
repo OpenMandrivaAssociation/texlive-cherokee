@@ -52,3 +52,18 @@ represented \Cse\Cgwo\Cya.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20081225-2
++ Revision: 750150
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20081225-1
++ Revision: 718047
+- texlive-cherokee
+- texlive-cherokee
+- texlive-cherokee
+- texlive-cherokee
+- texlive-cherokee
+
