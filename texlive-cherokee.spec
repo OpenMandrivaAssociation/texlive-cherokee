@@ -5,8 +5,8 @@
 # catalog-license noinfo
 # catalog-version undef
 Name:		texlive-cherokee
-Version:	20081225
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	A font for the Cherokee script
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cherokee
