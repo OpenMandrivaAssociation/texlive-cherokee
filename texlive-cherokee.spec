@@ -5,7 +5,7 @@
 # catalog-license noinfo
 # catalog-version undef
 Name:		texlive-cherokee
-Version:	20170414
+Version:	20180303
 Release:	1
 Summary:	A font for the Cherokee script
 Group:		Publishing
