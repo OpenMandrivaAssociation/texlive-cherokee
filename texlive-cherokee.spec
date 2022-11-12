@@ -5,8 +5,8 @@ Summary:	A font for the Cherokee script
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cherokee
 License:	NOINFO
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.r21046.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.doc.r21046.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
