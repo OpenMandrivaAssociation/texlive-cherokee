@@ -1,18 +1,12 @@
-# revision 21046
-# category Package
-# catalog-ctan /fonts/cherokee
-# catalog-date 2008-12-25 20:17:19 +0100
-# catalog-license noinfo
-# catalog-version undef
 Name:		texlive-cherokee
-Version:	20190228
+Version:	21046
 Release:	1
 Summary:	A font for the Cherokee script
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/fonts/cherokee
 License:	NOINFO
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.r21046.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/cherokee.doc.r21046.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ appropriate character; for example, Segwoya himself would be
 represented \Cse\Cgwo\Cya.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -45,25 +39,10 @@ represented \Cse\Cgwo\Cya.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar fonts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20081225-2
-+ Revision: 750150
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20081225-1
-+ Revision: 718047
-- texlive-cherokee
-- texlive-cherokee
-- texlive-cherokee
-- texlive-cherokee
-- texlive-cherokee
-
